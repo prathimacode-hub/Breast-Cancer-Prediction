@@ -1,0 +1,45 @@
+<p>
+<head>
+<style>
+  h1 {font-size: 50px;}
+  h1 {text-align: center;}
+  h1 {font-family: "Garamond";}
+  h1 {color: green}
+  h2 {font-family: "Garamond"; font-size: 30px; font-weight: bold;}
+  label {font-size: 30px; font-weight: 400;}
+  label {font-family: "Garamond";}
+  input {font-size: 30px;}
+  input {font-family: "Garamond";}
+  button {text-align: center;} 
+  button {font-size: 25px;}
+  button {font-family: "Garamond";}
+  .backgroundImage {
+   background-image: path("/images/background.jpg");
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   }
+</style>
+</head>
+</p>  
+
+<div class="backgroundImage"/>
+
+<h1>BREAST CANCER PREDICTION</h1>
+  
+<center><label>Breast Cancer is most prevelant disease that's storming the lives of females.</label></center><br><br><br>
+
+<label>This Breast Cancer Prediction is built using Machine Learning Algorithm-Logistic Regression, is '97%' accurate and takes into account using radius and perimeter of the spread. Just add the details:</label><br><br><br>
+  
+<form action="{{ url_for("breast_cancer")}}" method="POST">
+  
+<label for="rm">Radius Mean:</label>
+<input id="rm" name="radius_mean" type="text" placeholder="add radius mean" /><br><br><br>
+  
+<label for="ps">Perimeter_SE:</label>
+<input id="ps" name="perimeter_se" type="text" placeholder="add perimeter" /><br><br><br><br>
+            
+<center><button type="submit">Cancer Benign or Malignant?</button></form></center>
+
+<center><h2>{{output}}</h2></div></center>
